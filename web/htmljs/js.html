@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body align="center" style="background-color:yellow">
+
+<script type="text/javascript"  >
+    function startTime()
+    {
+        var today=new Date()
+        var  d=  today.getUTCFullYear();
+        var b=  today.getMonth();
+        var c=today.getDate();
+        var h=today.getHours()
+        var m=today.getMinutes()
+        var s=today.getSeconds()
+
+        m=checkTime(m)
+        s=checkTime(s)
+        document.getElementById('txt').innerHTML=d+"-"+b+"-"+c+"-"+h+":"+m+":"+s;
+
+    }
+
+    setInterval(startTime,1000)
+    function checkTime(i)
+    {
+        if (i<10)
+        {i="0" + i}
+        return i
+    }
+
+//var str="hello word";
+//var d=new Date();
+ //alert(d);
+
+//var array=[1,4,7,2,5,8,3,6,9];
+//for (var a=0;array.length;a++){
+  //  alert(array[a]);
+
+//}
+
+//function sunAB(a,b){
+// return a+b;
+//}
+//setInterval(sunAB ,1000,10,20);
+//获得标签对象
+ var m=document.getElementById("bid");
+// 向该对象存放内容
+ m.innerText="<h1>+c+</h1>";
+//m.innerHTML="<h1>"+c+"</h1>"
+
+
+</script>
+<div id="txt"></div>
+</body>
+</html>
